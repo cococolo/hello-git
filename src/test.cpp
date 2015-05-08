@@ -4,6 +4,6 @@
 int main(void)
 {
     printf("hello\n");
-    printf("test result is %d\n", add(3, 5));
+    printf("test result is %d\n", sub(3, 5));
     return 0;
 }
