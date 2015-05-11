@@ -3,12 +3,15 @@
 
 int main(void)
 {
-    List<char> test_list;
-
-    test_list.test();
+    List<int> test_list;
+    
+    test_list.push_front(10);
+    test_list.push_front(20);
+    test_list.push_front(30);
+    test_list.push_front(40);
+    test_list.print_list();
 
     //printf("hello\n");
     //printf("test result is %d\n", sub(3, 5));
-
     return 0;
 }
