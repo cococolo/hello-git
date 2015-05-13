@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "list.h"
+#include "binary_tree.h"
 
 int main(void)
 {

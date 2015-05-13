@@ -15,10 +15,12 @@ private:
         Object data;
         Node *prev;
         Node *next;
-        Node( const Object & d = Object{ }, Node * p = NULL,
-        Node * n = NULL)
+
+        Node( const Object & d = Object{ }, Node * p = NULL, Node * n = NULL)
         : data{ d }, prev{ p }, next{ n}
-        {}
+        {
+            debug("node para constructor");
+        }
  };
 
 public:
@@ -26,7 +28,9 @@ class const_iterator
 {
 public:
     const_iterator( ) : current{ NULL }
-    {}
+    {
+        debug("const_iterator constructor");
+    }
     const Object & operator* ( ) const
     { return retrieve( ); }
     const_iterator & operator++ ( )
@@ -50,7 +54,9 @@ protected:
     Object & retrieve( ) const
     { return current->data; }
     const_iterator( Node *p ) : current{ p }
-    {}
+    {
+        debug("const_iterator para constructor");
+    }
     friend class List<Object>;
 };
 
@@ -58,7 +64,9 @@ class iterator : public const_iterator
 {
 public:
     iterator( )
-    {}
+    {
+        debug("iterator constructor");
+    }
     Object & operator* ( )
     { return const_iterator::retrieve( ); }
     const Object & operator* ( ) const
@@ -76,7 +84,9 @@ public:
     }
 protected:
     iterator( Node *p ) : const_iterator{ p }
-    {}
+    {
+        debug("iterator para constructor");
+    }
     friend class List<Object>;
 };
 
@@ -210,7 +220,7 @@ public:
 
     void print_list()
     {
-        Node *temp = head;
+        Node *temp = head->next;
         for(int i = 0; i < theSize; i++)
         {
             printf("%d\n", temp->data);
@@ -230,6 +240,7 @@ private:
         tail = new Node;
         head->next = tail;
         tail->prev = head;
+        debug("list init");
     }
 };
 
