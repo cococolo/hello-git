@@ -3,6 +3,7 @@
 #include <iostream>
 #include "binary_tree.h"
 #include <time.h>
+#include <stdlib.h>
 
 #define SIZE 10
 
@@ -30,7 +31,7 @@ int main(void)
     debug("list has %d items", test_list.get_size());
     test_list.print_list();*/
 
-    BinarySearchTree<uint16_t> my_tree;
+    BinarySearchTree<unsigned int> my_tree;
     /*time_t start = time(NULL);
     for(int i = 0; i < SIZE; i++)
     {

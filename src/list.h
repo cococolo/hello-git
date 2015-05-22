@@ -103,8 +103,8 @@ public:
     List( const List & rhs )
     {
         init( );
-        for( auto &x:rhs)
-        push_back( x );
+        //for( auto &x:rhs)
+        //push_back( x );
     }
 
     List & operator= ( const List & rhs )
@@ -119,8 +119,8 @@ public:
     : theSize{ rhs.theSize }, head{ rhs.head }, tail{ rhs.tail }
     {
         rhs.theSize = 0;
-        rhs.head = nullptr;
-        rhs.tail = nullptr;
+        rhs.head = NULL;
+        rhs.tail = NULL;
     }
 
     List & operator= ( List & rhs )

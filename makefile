@@ -16,11 +16,11 @@ TARGET   = projectname
 
 CC       = g++
 # compiling flags here
-CFLAGS   = -std=c++11 -Wall -I.
+CFLAGS   = -Wall -I.
 
 LINKER   = g++ -o
 # linking flags here
-LFLAGS   = -Wall -I. -lm
+LFLAGS   = -std=c++11 -Wall -I. -lm
 
 # change these to set the proper directories where each files shoould be
 SRCDIR   = src
